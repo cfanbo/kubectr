@@ -28,8 +28,6 @@ GO_LDFLAGS=-ldflags "-s -w $(CTIMEVAR)"
 GOOSARCHES = linux/amd64 darwin/amd64 windows/amd64
 GOOS = $(shell $(GO) env GOOS)
 GOARCH= $(shell $(GO) env GOARCH)
-GETENVOY_VERSION = v0.2.0
-GORELEASER_VERSION = v0.174.2
 
 .PHONY: all
 all: clean lint test build ## Runs a clean, build, fmt, lint, test, and vet.
