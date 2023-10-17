@@ -13,11 +13,11 @@ func NewCmd() *cobra.Command {
 	o := newCtrOptions()
 
 	var rootCmd = &cobra.Command{
-		Use:   "ctr podName", // This is prefixed by kubectl in the custom usage template
+		Use:   "ctr <pod-name>", // This is prefixed by kubectl in the custom usage template
 		Short: "display all containers in the pod",
 		Long: `display all containers in the pod.
 
-You can invoke ctr through kubectl: "kubectl ctr podName"`,
+You can invoke ctr through kubectl: "kubectl ctr <pod-name>"`,
 		SilenceUsage:  true,
 		SilenceErrors: true,
 		RunE: func(cmd *cobra.Command, args []string) error {
